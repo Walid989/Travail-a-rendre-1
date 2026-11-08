@@ -1,0 +1,230 @@
+
+/* =========================
+   1. GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1120;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+/* =========================
+   2. NAVIGATION
+========================= */
+
+header {
+    background-color: #111a2e;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 28px;
+}
+
+nav h2 span {
+    color: #00d9ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d9ff;
+}
+
+/* =========================
+   3. HOME SECTION
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text > p:first-child {
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: #00d9ff;
+}
+
+.hero-text h3 {
+    color: #aab8d0;
+    margin-bottom: 15px;
+}
+
+.hero-text > p {
+    margin-bottom: 25px;
+    color: #c3ccda;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00d9ff;
+    color: #0b1120;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   4. PROFILE IMAGE
+========================= */
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #00d9ff;
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.25);
+}
+
+/* =========================
+   5. GENERAL SECTIONS
+========================= */
+
+section:not(.hero) {
+    padding: 70px 8%;
+}
+
+section:not(.hero) h2 {
+    font-size: 30px;
+    color: #00d9ff;
+    margin-bottom: 25px;
+}
+
+section:not(.hero) p {
+    color: #c3ccda;
+}
+
+/* =========================
+   6. CARDS
+========================= */
+
+.card {
+    background-color: #15223a;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #263750;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00d9ff;
+}
+
+.card h3 {
+    color: #00d9ff;
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cards .card {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* =========================
+   7. FOOTER
+========================= */
+
+footer {
+    background-color: #111a2e;
+    text-align: center;
+    padding: 25px;
+    color: #aab8d0;
+}
+
+/* =========================
+   8. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
